@@ -23,13 +23,13 @@ description: "An archive of posts sorted by categories."
 </ul>
 
 {% for tag in site.categories %} 
-  <h2 id="{{ tag[0] }}" style="color: #c91b26">{{ tag[0] | capitalize }}</h2>
+  <h4 id="{{ tag[0] }}" style="color: #0074F7;margin-top:1.25rem">{{ tag[0] | capitalize }}</h4>
   <ul class="post-list">
     {% assign pages_list = tag[1] %}  
     {% for post in pages_list %}
       {% if post.title != null %}
       {% if group == null or group == post.group %}
-      <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
+      <li><a href="{{ site.url }}{{ post.url }}"><strong>{{ post.title }}</strong><span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished"><strong>{{ post.date | date: "%B %d, %Y" }}</strong></time></a></li>
       {% endif %}
       {% endif %}
     {% endfor %}

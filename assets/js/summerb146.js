@@ -17,7 +17,7 @@ var summer = (function ($) {
             var postPos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop(),
                 windowHeight = $(window).height();
-                if (postPos < topOfWindow + (windowHeight/ 1.4)) {
+                if (postPos < topOfWindow + (windowHeight/ 1.0)) {
                     $(this).addClass('fadeInDown');
                 }
             });

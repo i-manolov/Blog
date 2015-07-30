@@ -313,21 +313,21 @@ html, body, .summer-post-container, .summer-post-header {
 
 .summer-author-info {
   padding: 0;
-  padding-top: 3.75rem;
-  padding-bottom: 3.75rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
   background: #f2f2f2; }
-  @media only screen and (min-width: 40.063em) {
+ /* @media only screen and (min-width: 40.063em) {
     .summer-author-info {
-      padding-top: 5rem;
-      padding-bottom: 5rem; } }
+      padding-top: 3rem;
+      padding-bottom: 3rem; } }
   @media only screen and (min-width: 70em) {
     .summer-author-info {
-      padding-top: 6.875rem;
-      padding-bottom: 6.875rem; } }
+      padding-top: 4.875rem;
+      padding-bottom: 4.875rem; } }
   @media only screen and (min-width: 90em) {
     .summer-author-info {
-      padding-top: 7.5rem;
-      padding-bottom: 7.5rem; } }
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem; } }*/
   .summer-author-info .summer-post-author {
     padding-left: 1.875rem;
     padding-right: 1.875rem;
@@ -350,8 +350,8 @@ html, body, .summer-post-container, .summer-post-header {
       .summer-author-info .summer-post-author > p a {
         color: #4099FF; }
     .summer-author-info .summer-post-author .summer-post-author-avatar {
-      width: 12.5rem;
-      height: 12.5rem;
+      width: 8.5rem;
+      height: 8.5rem;
       border-radius: 50%;
       float: none;
       margin-right: 0;

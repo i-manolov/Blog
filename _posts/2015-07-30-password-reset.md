@@ -3,9 +3,13 @@ layout: post
 title: Password Reset in Nodejs
 description: "In this tutorial, we will create a login module along with a signup and password functionality in Nodejs using Sequelizer with Postgresql"
 headline: "Password Reset in Nodejs"
-categories: Nodejs Express Sequelize Nodemailer Postgresql
+categories: Blog
 tags: 
   - Nodejs
+  - Express
+  - Sequelize
+  - Postgresql
+  - Nodemailer
 imagefeature: "password-reset3.jpg"
 imagecredit: http://cryptobizmagazine.com/
 imagecreditlink: "http://cryptobizmagazine.com/wp-content/uploads/2014/06/shutterstock_122234134-medium.jpg"
@@ -15,7 +19,7 @@ featured: true
 published: true
 ---
 
-In this tutorial, we will create a login module along with a signup and password functionality in Nodejs using Sequelizer with Postgresql and Nodemailer.
+In this tutorial, we will create a complete login module containing a forgot your password feature and sign up form using Express, Sequelize with Postgresql, and Nodemailer.                             
 
 
 Some other gibberish

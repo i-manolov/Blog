@@ -21,58 +21,75 @@ published: true
 
 In this tutorial, we will create a complete login module containing a forgot your password feature and sign up form using Express, Sequelize with Postgresql, and Nodemailer.                             
 
-
-Some other gibberish
+To start off, we will begin with some express basics. Let's first install express-generator globally which will create an express project skeleton for us. For our convenience, we will also install nodemon which will watch for any file changes in which it was started and if any file changes, it will restart the nodejs application automatically for us with the latest changes. Execute the following command in your command line: 
 
 {% highlight bash %}
-sudo npm install -g express-generator
+npm install -g express-generator nodemon
 {% endhighlight %}
 
+To create a new express project, run: 
 
+{% highlight bash %}
+express PasswordReset
+{% endhighlight %}
 
-{% highlight javascript %}
-var express = require('express');
-var path = require('path');
-var favicon = require('static-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+This will create a new folder called PasswordReset with the following structure: 
 
-var app = express();
+{% highlight bash %}
+.
+├── app.js
+├── bin
+│   └── www
+├── package.json
+├── public
+│   ├── images
+│   ├── javascripts
+│   └── stylesheets
+│       └── style.css
+├── routes
+│   ├── index.js
+│   └── users.js
+└── views
+    ├── error.jade
+    ├── index.jade
+    └── layout.jade
+{% endhighlight %}
 
-// Middleware
-app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-app.use(favicon());
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+Afterwards, we need to install all express dependencies locally by first changing our current directory to our project and running: 
 
-// Routes
-app.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
-});
+{% highlight bash %}
+npm install
+{%  endhighlight %}
 
+To keep the app architecture simpler, let's delete the bin folder and delete the users.js file inside the routes directory since we will not be using it. 
+
+Now we will need to make some minor adjustments to app.js. First, locate the following line and delete it.
+{% highlight javascript  %}
+app.use('/users', users);
+{% endhighlight %}
+
+Then we will set the port we want to run our application to run on by passing an extra argument during startup or run it by default on port 3000.
+
+{% highlight javascript  %}
+// filename: app.js
+app.set('port', process.argv[2] || 3000);
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
-{%  endhighlight %}
+{% endhighlight %}
 
-{% highlight css %}
-#container {
-  float: left;
-  margin: 0 -240px 0 0;
-  width: 100%;
+Before running the application, we need to update the package.json 'start' command to use nodemon and run our app.js instead of the now deleted bin/www.
+
+{% highlight javascript %}
+// package.json
+"scripts": {
+    "start": "nodemon app.js"
 }
 {% endhighlight %}
 
-<pre>
-  <code class="ruby">
-    puts "hello"
-  </code>
-</pre>
+Alas, we can run our application with {% highlight bash  %}npm start {% endhighlight %} and feast our eyes upon the "Welcome to Express" page. 
+
+![cover-image]({{ site.url }}/images/password-reset/welcome-to-express-page.png)
+
 
 

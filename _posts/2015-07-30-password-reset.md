@@ -89,7 +89,9 @@ Before running the application, we need to update the package.json 'start' comma
 
 Alas, we can run our application with {% highlight bash  %}npm start {% endhighlight %} and feast our eyes upon the "Welcome to Express" page. 
 
-![cover-image]({{ site.url }}/images/password-reset/welcome-to-express-page.png)
+<div class="row" style="border-width:1px; border-style:solid;border-color:black">
+    <img src='{{ site.url }}/images/password-reset/welcome-to-express-page.png' />
+</div>
 
 
 
